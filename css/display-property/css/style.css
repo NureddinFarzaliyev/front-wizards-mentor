@@ -1,0 +1,41 @@
+body {
+    background-color: rebeccapurple;
+}
+
+div {
+    height: 300px;
+    width: 300px;
+    display: inline-block;
+    /* display: inline; */
+    /* display: block; */
+
+    text-align: center;
+    font-size: 72px;
+    font-weight: lighter;
+    line-height: 300px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+}
+
+section {
+    width: 1525px;
+}
+
+#first-container {
+    background-color: white;
+}
+
+#first-container div {
+    background-color: royalblue;
+    color: white;
+}
+
+#second-container {
+    background-color: royalblue;
+}
+
+#second-container div {
+    background-color: white;
+    color: royalblue;
+}

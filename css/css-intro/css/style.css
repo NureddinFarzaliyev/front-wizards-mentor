@@ -1,0 +1,61 @@
+body {
+  background-color: #02060E;
+  color: white;
+}
+
+span {
+  background-color: #FFD700;
+  color: black;
+  font-weight: bold;
+}
+
+b {
+  font-size: 1.2em;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: lighter;
+}
+
+.blue-red-list li:nth-child(odd) { /* tək */
+  color: pink;
+}
+
+.blue-red-list li:nth-child(even) { /* even */
+  color: lightblue;
+}
+
+.green-yellow-list li:nth-child(odd) {
+  color: yellow;
+}
+
+.green-yellow-list li:nth-child(even) {
+  color: lightgreen;
+}
+
+.lists-container div {
+  display: inline-block;
+}
+
+h4 {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 10px;
+  word-spacing: 20px;
+}
+
+#answers span {
+  background-color: transparent;
+}
+
+#answers span:nth-child(1) {
+  color: green;
+  font-size: 2em;
+}
+
+#answers span:nth-child(2) {
+  color: rgba(255, 0, 0, 0.5);
+  font-size: 0.5em;
+}
