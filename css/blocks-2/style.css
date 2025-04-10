@@ -1,0 +1,28 @@
+.box {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.75);
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.container:nth-child(1) {
+    background-color: red;
+    border-radius: 20px 20px 0 0;
+    .box {
+        background-color: blue;
+    }
+}
+
+.container:nth-child(2) {
+    background-color: blue;
+    border-radius: 0 0 20px 20px;
+    .box {
+        background-color: red;
+    }
+}
