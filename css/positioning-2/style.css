@@ -1,0 +1,100 @@
+body {
+    min-height: 300vh;
+    background-color: rebeccapurple;
+    color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.intro {
+    text-align: center;
+    position: sticky;
+    top: 10px;
+    margin: 40vh 0;
+    font-size: 56px;
+    background-color: rgba(102, 51, 153, .75);
+    width: 100%;
+}
+
+.intro::after {
+    content: '👋';
+    position: absolute;
+    font-size: 42px;
+    margin-left: 10px;
+    box-shadow: 0 0 30px 30px rgba(255, 255, 255, .5);
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+p {
+    text-align: center;
+}
+
+button {
+    height: 75px;
+    width: 200px;
+    background-color: blueviolet;
+    border: none;
+    color: white;
+    font-size: 24px;
+    border-radius: 10px;
+    transition: all 0.3s;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+
+
+    &:hover {
+        background-color: rebeccapurple;
+        border: 2px solid white;
+        transform: scale(1.2);
+    }
+}
+
+.container {
+    height: 500px;
+    width: 500px;
+    background-color: aquamarine;
+    margin: 150px auto;
+    position: relative;
+    
+    > div {
+        height: 100px;
+        width: 100px;
+        background-color: chartreuse;
+        position: absolute;
+        border-radius: 15px;
+    }
+
+    > div:nth-child(1) {
+        top: 10px;
+        left: 10px;
+    }
+
+    > div:nth-child(2) {
+        top: 10px;
+        right: 10px;
+    }
+
+    > div:nth-child(3) {
+        bottom: 10px;
+        left: 10px;
+    }
+
+    > div:nth-child(4) {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    > div:nth-child(5) {
+        background-color: red;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+    }
+}

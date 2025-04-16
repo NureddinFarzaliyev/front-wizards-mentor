@@ -1,0 +1,109 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: rebeccapurple;
+    font-family: 'Roboto', sans-serif;
+    min-height: 300vh;
+    color: white;
+}
+
+.intro {
+    position: sticky;
+    text-align: center;
+    font-size: 5rem;
+    margin: 30vh 0 60vh 0;
+    top: 0;
+    background-color: rgb(102, 51, 153, .75);
+}
+
+.intro::after{
+    content: '👋';
+    position: absolute;
+    height: 50px;
+    width: 50px;       
+    background-color: rgba(255, 255, 255, .65); 
+    top: 0;
+    border-radius: 50%;
+    font-size: 40px;
+    line-height: 50px;
+    box-shadow: 0px 0px 50px 20px white;
+}
+
+.par-1 {
+    text-align: center;
+    padding: 20px 20vh;
+}
+
+.how-are-you {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: purple;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);    
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+        background-color: blueviolet;
+        scale: 1.1;
+    }
+}
+
+.box-cont-cont {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+}
+
+.box-cont {
+    height: 400px;
+    width: 400px;
+    border: 15px;
+    background-color: cornflowerblue;
+    border-radius: 10px;
+    position: relative;
+    z-index: -1;
+
+    & div {
+        border-radius: 10px;
+        background-color: rebeccapurple;
+        position: absolute;
+        height: 100px;
+        width: 100px;
+    }
+
+    & div:nth-child(1) {
+        top: 20px;
+        right: 20px;
+    }
+
+    & div:nth-child(2) {
+        top: 20px;
+        left: 20px;
+    }
+
+    & div:nth-child(3) {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    & div:nth-child(4) {
+        bottom: 20px;
+        left: 20px;
+    }
+
+    & div:nth-child(5) {
+        top: 50%;
+        left: 50%;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
