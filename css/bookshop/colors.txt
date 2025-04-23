@@ -1,0 +1,5 @@
+text - #333
+background -  #f4f4f4
+primary - #49416D
+primary darker - #342E4D
+secondary - #532790
