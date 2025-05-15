@@ -1,0 +1,141 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #afafaf;
+}
+
+@keyframes letter-come-in {
+    0% {
+        transform: translate(-200px, -200px) scale(0) rotate(-135deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0px, 0px) scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+#animation1 {
+    & div {
+        display: flex;
+    }
+
+    & p {
+        font-size: 120px;
+        font-weight: 600;
+        animation: letter-come-in 1s forwards;
+        transform: translate(-200px, -200px) scale(0) rotate(-135deg);
+        opacity: 0;
+    }
+
+    & p:nth-child(2) {
+        animation-delay: 150ms;
+    }
+
+    & p:nth-child(3) {
+        animation-delay: 300ms;
+    }
+    & p:nth-child(4) {
+        animation-delay: 450ms;
+    }
+    & p:nth-child(5) {
+        animation-delay: 600ms;
+    }
+    & p:nth-child(6) {
+        animation-delay: 750ms;
+    }
+    & p:nth-child(7) {
+        animation-delay: 900ms;
+    }
+    & p:nth-child(8) {
+        animation-delay: 1050ms;
+    }
+}
+  
+  
+@keyframes letter-pulsate {
+    0% {
+        scale: 1;
+    }
+    50% {
+        scale: 1.5;
+        text-shadow: 
+            0px 0px 75px #0a583d, 
+            0px 0px 20px #0fc786;
+    } 
+    100% {
+        scale: 1;
+    }
+    
+}
+
+#animation2 {
+    & div {
+        display: flex;
+    }
+
+    & p {
+        font-size: 200px;
+        font-weight: 600;
+        margin: 0px 10px;
+        color: #09744e;
+        animation: letter-pulsate 3s infinite;
+    }
+
+    & p:nth-child(2) {
+        animation-delay: 400ms;
+    }
+
+    & p:nth-child(3) {
+        animation-delay: 800ms;
+    }
+}
+
+@keyframes letter-wave {
+    50% {
+        transform: translateY(75px);
+    } 
+}
+
+#animation3 {
+    & div {
+        display: flex;
+    }
+
+    & p {
+        font-size: 150px;
+        font-weight: 600;
+        color: #1A2C79;
+        animation: letter-wave 1s infinite ease-in-out;
+    }
+
+    & p:nth-child(2) {
+        animation-delay: 100ms;
+    }
+    & p:nth-child(3) {
+        animation-delay: 200ms;
+    }
+    & p:nth-child(4) {
+        animation-delay: 300ms;
+    }
+    & p:nth-child(5) {
+        animation-delay: 400ms;
+    }
+    & p:nth-child(6) {
+        animation-delay: 500ms;
+    }
+    & p:nth-child(7) {
+        animation-delay: 600ms;
+    }
+}
+  
+  
