@@ -1,0 +1,31 @@
+body {
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 300px repeat(3, 200px);
+    grid-template-rows: repeat(2, 200px);
+    gap: 20px;
+}
+
+div {
+    height: 100%;
+    width: 100%;
+    background-color: rebeccapurple;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: white;
+}
+
+div:nth-child(1) {
+    grid-area: 1 / 1 / span 2 / span 1;
+    height: 420px;
+}
