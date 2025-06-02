@@ -1,0 +1,37 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: rebeccapurple;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 100px;
+    color: white;
+
+    @media (max-width: 1000px) {
+        padding: 20px 20px;
+    }
+
+    & ul {
+        display: flex;
+        gap: 10px;
+
+        @media (max-width: 620px) {
+            display: none;
+        }
+
+        & li {
+            list-style: none;
+        }
+    }
+
+    #menu {
+        @media (min-width: 620px) {
+            display: none;
+        }
+    }
+}
