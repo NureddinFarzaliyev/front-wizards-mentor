@@ -1,5 +1,7 @@
 const arr = [1, null, '2', '3', 4, 5];
 
+// Using if/else statements;
+
 // Check if array's first element is a string
 // Siyahının ilk elementinin string olmasını yoxla
 

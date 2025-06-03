@@ -1,5 +1,7 @@
 const arr = [2, null, 3, 4, 5];
 
+// Using if/else statements;
+
 // Check if array's first element is even
 // Siyahının ilk elementinin cüt olmasını yoxla
 
