@@ -10,62 +10,61 @@ const LocationPage = () => {
   const [residents, setResidents] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
+  // useEffect(() => {
+  //   const fetchLocation = async () => {
+  //     try {
+  //       const response = await axios.get(
+  //         `https://rickandmortyapi.com/api/location/${id}`,
+  //       );
+  //       setLocationData(response.data);
+  //
+  //       const residentIds = response.data.residents.map((url) => {
+  //         const parts = url.split("/");
+  //         return parts[parts.length - 1];
+  //       });
+  //
+  //       const residentsResponse = await axios.get(
+  //         `https://rickandmortyapi.com/api/character/${residentIds.join(",")}`,
+  //       );
+  //
+  //       setResidents(
+  //         Array.isArray(residentsResponse.data)
+  //           ? residentsResponse.data
+  //           : [residentsResponse.data],
+  //       );
+  //     } catch (error) {
+  //       console.error("Failed to fetch location:", error);
+  //     } finally {
+  //       setIsLoading(false);
+  //     }
+  //   };
+  //
+  //   fetchLocation();
+  // }, [id]);
+
   useEffect(() => {
     const fetchLocation = async () => {
-      try {
-        const response = await axios.get(
-          `https://rickandmortyapi.com/api/location/${id}`,
-        );
-        setLocationData(response.data);
-
-        const residentIds = response.data.residents.map((url) => {
-          const parts = url.split("/");
-          return parts[parts.length - 1];
-        });
-
-        const residentsResponse = await axios.get(
-          `https://rickandmortyapi.com/api/character/${residentIds.join(",")}`,
-        );
-
-        setResidents(
-          Array.isArray(residentsResponse.data)
-            ? residentsResponse.data
-            : [residentsResponse.data],
-        );
-      } catch (error) {
-        console.error("Failed to fetch location:", error);
-      } finally {
-        setIsLoading(false);
-      }
+      const response = await axios.get(
+        `https://rickandmortyapi.com/api/location/${id}`,
+      );
+      setLocationData(response.data);
+      console.log("Location data fetched:", response.data);
     };
 
     fetchLocation();
   }, [id]);
 
-  // useEffect(() => {
-  //   const fetchLocation = async () => {
-  //     const response = await axios.get(
-  //       `https://rickandmortyapi.com/api/location/${id}`,
-  //     );
-  //     setLocationData(response.data);
-  //     console.log("Location data fetched:", response.data);
-  //   };
-  //
-  //   fetchLocation();
-  // }, [id]);
-  //
-  // useEffect(() => {
-  //   if (locationData) {
-  //     const ids = locationData.residents.map((resident) => {
-  //       const splittedResident = resident.split("/");
-  //       const length = splittedResident.length;
-  //       return splittedResident[length - 1];
-  //     });
-  //
-  //     console.log(ids);
-  //     // fetch data based on ids
-  //   }
-  // }, [locationData]);
+  useEffect(() => {
+    if (locationData) {
+      const ids = locationData.residents.map((resident) => {
+        const splittedResident = resident.split("/");
+        const length = splittedResident.length;
+        return splittedResident[length - 1];
+      });
+
+      console.log(ids.join(","));
+    }
+  }, [locationData]);
 
   return (
     <div className="char-page">
