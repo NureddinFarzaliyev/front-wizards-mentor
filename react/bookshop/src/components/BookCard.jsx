@@ -7,7 +7,6 @@ const BookCard = ({ title, author, id, coverUrl }) => {
         {coverUrl && <img src={coverUrl} alt={`${title} cover`} />}
         {title && <h3>{title}</h3>}
         {author && <p>{author}</p>}
-        {id && <p>ID: {id}</p>}
       </div>
     </Link>
   );
