@@ -13,6 +13,7 @@ html {
 body {
   background-color: #121212;
   color: #e0e0e0;
+  margin-top: 100px;
 }
 
 a {
@@ -27,7 +28,10 @@ header {
   align-items: center;
   justify-content: center;
   color: white;
-  position: relative;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 
   .wishlist-link {
     position: absolute;
