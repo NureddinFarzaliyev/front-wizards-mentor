@@ -6,3 +6,5 @@
 - Display wishlist
 - Persist wishlist using localStorage
 - Add download or remove option for books in wishlist
+
+**Note:** use `bun run dev` in this directory to run the project.
