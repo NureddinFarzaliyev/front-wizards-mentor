@@ -1,22 +1,26 @@
-import { useEffect } from "react";
-import { supabase } from "../../app/supabase";
-import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../../contexts/AuthContext";
 
 const Home = () => {
-  const navigate = useNavigate("/");
+  const { user, userLoading } = useContext(AuthContext);
 
-  useEffect(() => {
-    const checkUser = async () => {
-      const { data } = await supabase.auth.getUser();
-      if (data.user === null) {
-        navigate("/login");
-      }
-    };
-
-    checkUser();
-  }, []);
-
-  return <div>only logged</div>;
+  if (userLoading || !user) {
+    return <div>Loading....</div>;
+  } else if (user) {
+    return (
+      <div>
+        {" "}
+        Logged in {user?.email} <Link to="/app">Go to app</Link>{" "}
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        Go to <Link to="/login">login </Link>{" "}
+      </div>
+    );
+  }
 };
 
 export default Home;

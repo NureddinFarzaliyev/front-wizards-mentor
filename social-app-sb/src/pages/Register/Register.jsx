@@ -1,8 +1,17 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Input from "../../components/Inputs/Input";
 import { supabase } from "../../app/supabase";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../contexts/AuthContext";
 
 const Register = () => {
+  const { user, userLoading } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  if (user && !userLoading) {
+    navigate("/");
+  }
+
   const [value, setValue] = useState({
     username: "",
     email: "",
@@ -36,6 +45,10 @@ const Register = () => {
     console.log("User registered successfully:", data);
     console.log("Username saved successfully:", usernameData);
   };
+
+  if (userLoading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <>
