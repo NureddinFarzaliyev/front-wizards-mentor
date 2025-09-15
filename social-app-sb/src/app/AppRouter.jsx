@@ -5,6 +5,8 @@ import Home from "../pages/Home/Home";
 import SocialApp from "../pages/SocialApp/SocialApp";
 import Profile from "../pages/Profile/Profile";
 import PublicProfile from "../pages/PublicProfile/PublicProfile";
+import CreatePost from "../pages/CreatePost/CreatePost";
+import Feed from "../pages/Feed/Feed";
 
 const AppRouter = () => {
   return (
@@ -15,6 +17,8 @@ const AppRouter = () => {
       <Route path="/@/:username" element={<PublicProfile />} />
       <Route path="/app" element={<SocialApp />}>
         <Route path="/app/profile" element={<Profile />} />
+        <Route path="/app/post" element={<CreatePost />} />
+        <Route path="/app/feed" element={<Feed />} />
       </Route>
     </Routes>
   );
