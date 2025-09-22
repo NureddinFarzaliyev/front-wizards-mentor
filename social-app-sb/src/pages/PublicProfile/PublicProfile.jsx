@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { supabase } from "../../app/supabase";
+import AvatarUsername from "../../components/AvatarUsername/AvatarUsername";
+import PostsByUser from "../../components/PostsByUser/PostsByUser";
 
 const PublicProfile = () => {
   const { username } = useParams();
@@ -24,7 +26,10 @@ const PublicProfile = () => {
   return loading ? (
     <div>Loading...</div>
   ) : profile ? (
-    <div>Welcome to profile - {profile.username}</div>
+    <>
+      <AvatarUsername username={username} />
+      <PostsByUser username={username} />
+    </>
   ) : (
     <div>User not found</div>
   );

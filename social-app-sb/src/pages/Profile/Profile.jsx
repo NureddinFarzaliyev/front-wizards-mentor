@@ -1,5 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
+import PostsByUser from "../../components/PostsByUser/PostsByUser";
+import AvatarUsername from "../../components/AvatarUsername/AvatarUsername";
 
 const Profile = () => {
   const { user, isUserLoading, username, isUsernameLoading } =
@@ -9,12 +11,9 @@ const Profile = () => {
     <div>Loading...</div>
   ) : (
     <div>
-      <p>
-        <b>Email:</b> {user?.email}
-      </p>
-      <p>
-        <b>Username:</b> @{username}
-      </p>
+      <AvatarUsername username={username} />
+      <p>{user?.email}</p>
+      <PostsByUser username={username} />
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { supabase } from "../../app/supabase";
-import Avatar from "boring-avatars";
+import Post from "../../components/Post/Post";
 
 const Feed = () => {
   const [loading, setLoading] = useState(true);
@@ -22,22 +22,7 @@ const Feed = () => {
     return (
       <div>
         {[...posts].reverse().map((p, i) => (
-          <div
-            key={i}
-            style={{
-              border: "solid 1px black",
-              borderRadius: 12,
-              padding: 10,
-              marginTop: 10,
-            }}
-          >
-            <h4>{p.title}</h4>{" "}
-            <div style={{ display: "flex", gap: 5, alignItems: "center" }}>
-              <Avatar name={p.username} style={{ height: 40, width: 40 }} />{" "}
-              <p>@{p.username}</p>{" "}
-            </div>{" "}
-            <p>{p.description}</p>{" "}
-          </div>
+          <Post post={p} key={i} />
         ))}
       </div>
     );
