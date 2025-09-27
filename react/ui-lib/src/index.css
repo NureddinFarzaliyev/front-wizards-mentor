@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+body {
+  background-color: #101010;
+  color: white;
+  font-family: "Manrope", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #1a1a1a;
+}
+
+main {
+  padding: 20px 50px;
+
+  & h2.page-header {
+    margin-bottom: 20px;
+    margin-top: 50px;
+    opacity: 0.8;
+  }
+}
+
+/* ===== Button Styles ===== */
+
+.btn {
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.3s ease;
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+/* Variant */
+
+.btn.solid {
+  border: none;
+}
+
+.btn.outline {
+  background-color: transparent !important;
+  border: 2px solid;
+}
+
+/* Size */
+
+.btn.small {
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.btn.medium {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.btn.large {
+  padding: 15px 30px;
+  font-size: 18px;
+}
+
+/* Color */
+
+.btn.blue {
+  background-color: #007bff;
+  border-color: #007bff;
+
+  &:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+}
+
+.btn.blue.solid {
+  color: white;
+}
+
+.btn.blue.outline {
+  color: #007bff;
+}
+
+.btn.gray {
+  background-color: #6c757d;
+  border-color: #6c757d;
+
+  &:hover {
+    background-color: #5a6268;
+    border-color: #5a6268;
+  }
+}
+
+.btn.gray.solid {
+  color: white;
+}
+
+.btn.gray.outline {
+  color: #6c757d;
+}
+
+.btn.white {
+  background-color: white;
+  border-color: white;
+
+  &:hover {
+    background-color: #e0e0e0;
+    border-color: #e0e0e0;
+  }
+}
+
+.btn.white.solid {
+  color: black;
+}
+
+.btn.white.outline {
+  color: white;
+}
+
+.btn.black {
+  background-color: black;
+  border-color: black;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.btn.black.solid {
+  color: white;
+}
+
+.btn.black.outline {
+  color: black;
+}
+
+/* ===== Flex Styles ===== */
+
+.flex {
+  display: flex;
+}
+
+.flex.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-start {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.flex.column {
+  flex-direction: column;
+}
+
+.flex.row {
+  flex-direction: row;
+}
+
+.flex.small {
+  gap: 4px;
+}
+
+.flex.medium {
+  gap: 16px;
+}
+
+.flex.large {
+  gap: 24px;
+}
