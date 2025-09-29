@@ -57,6 +57,11 @@ const Buttons = () => {
           </Button>
         ))}
       </Flex>
+      <hr />
+
+      <Button size="large" color="gray" variant="outline">
+        click me
+      </Button>
     </div>
   );
 };
