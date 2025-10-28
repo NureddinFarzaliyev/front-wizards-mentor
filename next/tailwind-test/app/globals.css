@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-main-bg: #0f111a;
+}
+
+@utility flex-all-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+@utility flex-all-2 {
+  @apply flex justify-center items-center gap-2;
+}
